@@ -360,12 +360,13 @@ img {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  display: grid;
-  row-gap: 1.1rem;
+  display: flex;
+  flex-direction: column;
 }
 .home__social-link {
   background-color: var(--black-color-light);
   color: var(--white-color);
+  margin: 10px 0;
   font-size: 1.5rem;
   padding: 6px;
   display: grid;
