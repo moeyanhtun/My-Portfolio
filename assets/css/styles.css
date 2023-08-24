@@ -548,13 +548,16 @@ img {
   justify-content: center;
   align-items: center;
   column-gap: 1rem;
+  margin-bottom: 2rem;
 }
 /*=============== SERVICES ===============*/
+
 .services__container {
   grid-template-columns: 250px;
   justify-content: center;
   row-gap: 2rem;
   padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 .services__card {
   position: relative;
@@ -853,6 +856,7 @@ img {
 .contact__social-link:hover {
   background-color: var(--first-color);
 }
+
 /*=============== FOOTER ===============*/
 
 /*=============== SCROLL BAR ===============*/
