@@ -61,15 +61,33 @@ const sendEmail = (e) => {
 }
 contactForm.addEventListener('submit', sendEmail)
 /*=============== SHOW SCROLL UP ===============*/
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp())
+// const scrollUp = () =>{
+// 	const scrollUp = document.getElementById('scroll-up')
+//     // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+//     if (scrollUp >= 350) {
+        
+//     }
+// }
+// window.addEventListener('scroll', scrollUp())
 
-
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollUp = document.getElementById("scroll-up");
+  
+    // Show the button when user scrolls down
+    window.onscroll = function () {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            scrollUp.style.display = "block";
+        } else {
+            scrollUp.style.display = "none";
+        }
+    };
+  
+    // Scroll to the top when the button is clicked
+    scrollUp.addEventListener("click", function () {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    });
+});
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 const scrollActive = () => {
